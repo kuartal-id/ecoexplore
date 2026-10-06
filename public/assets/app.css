@@ -139,3 +139,101 @@
   .big-number{font-size:60px}
   .carbon-result{padding:24px}
 }
+
+/* ==========================================================================
+   Adventure skin — national-park field guide (2026-10).
+   A design layer over the tokens above: same --eco/--deep palette, same
+   Poppins. Adds topo textures, trail dashes, ticket cards, sticker buttons.
+   Decorative only: no selectors move, light + dark both honoured.
+   ========================================================================== */
+body{--page-bg:var(--paper)}
+.section.alt{--page-bg:var(--soft)}
+.dark-section{--page-bg:var(--deep)}
+
+/* Trail-dash eyebrows: a little dashed path leading into each section label */
+.eyebrow{display:inline-flex;align-items:center;gap:9px}
+.section-head .eyebrow::before,.subhero .eyebrow::before{content:'';width:24px;border-top:2px dashed color-mix(in srgb,var(--muted) 65%,transparent)}
+
+/* Marker-highlight emphasis in headlines — hand-drawn felt-tip, not a glow */
+.hero-copy h1 em,.subhero h1 em{background:linear-gradient(180deg,transparent 60%,color-mix(in srgb,var(--eco) 55%,transparent) 60%);padding:0 .07em;border-radius:4px}
+
+/* Sticker buttons: hard offset shadow, tactile press */
+.btn{transition:transform .18s,box-shadow .18s}
+.btn-primary{box-shadow:0 3px 0 var(--deep),0 14px 30px rgba(25,228,90,.22)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 5px 0 var(--deep),0 18px 34px rgba(25,228,90,.28)}
+.btn-primary:active{transform:translateY(1px);box-shadow:0 1px 0 var(--deep)}
+.dark .btn-primary{box-shadow:0 3px 0 #000,0 14px 30px rgba(25,228,90,.18)}
+.dark .btn-primary:hover{box-shadow:0 5px 0 #000,0 18px 34px rgba(25,228,90,.24)}
+.btn-ghost{border:1.5px dashed color-mix(in srgb,var(--ink) 28%,transparent)}
+.dark .btn-ghost{border-color:#ffffff2e}
+
+/* Header: an enamel trail tag */
+.header-inner{border:1.5px solid color-mix(in srgb,var(--ink) 13%,transparent)}
+.brand img{height:44px;width:auto}
+.dark .header-inner{border-color:#ffffff1f}
+
+/* Topographic contours */
+.hero{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='560' height='560' viewBox='0 0 560 560'%3E%3Cg fill='none' stroke='%2319e45a' stroke-opacity='.14' stroke-width='1.5'%3E%3Cpath d='M280 60c150 0 235 90 235 220S430 500 280 500 45 410 45 280 130 60 280 60z'/%3E%3Cpath d='M285 115c115 0 180 70 180 165s-65 165-180 165-180-70-180-165 65-165 180-165z'/%3E%3Cpath d='M275 170c82 0 128 48 128 110s-46 110-128 110-128-48-128-110 46-110 128-110z'/%3E%3Cpath d='M280 225c48 0 76 24 76 55s-28 55-76 55-76-24-76-55 28-55 76-55z'/%3E%3C/g%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right -60px top 40px}
+.dark-section{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='560' height='560' viewBox='0 0 560 560'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.05' stroke-width='1.5'%3E%3Cpath d='M280 60c150 0 235 90 235 220S430 500 280 500 45 410 45 280 130 60 280 60z'/%3E%3Cpath d='M285 115c115 0 180 70 180 165s-65 165-180 165-180-70-180-165 65-165 180-165z'/%3E%3Cpath d='M275 170c82 0 128 48 128 110s-46 110-128 110-128-48-128-110 46-110 128-110z'/%3E%3Cpath d='M280 225c48 0 76 24 76 55s-28 55-76 55-76-24-76-55 28-55 76-55z'/%3E%3C/g%3E%3C/svg%3E");background-repeat:no-repeat;background-position:left -80px bottom -60px}
+
+/* Hero photo: taped-in field photo */
+.hero-photo{outline:2px dashed color-mix(in srgb,#ffffff 45%,transparent);outline-offset:-13px}
+
+/* Rotating park stamp (markup lives in home.blade.php) */
+.stamp{position:absolute;top:-30px;right:26px;width:116px;height:116px;z-index:4;transform:rotate(8deg);filter:drop-shadow(0 10px 22px rgba(7,28,33,.3))}
+.stamp .stamp-bg{fill:var(--deep)}
+.stamp .stamp-ring{fill:none;stroke:var(--eco);stroke-width:1.4;stroke-dasharray:3 4}
+.stamp text{font-family:Poppins,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:3px;fill:var(--eco)}
+.stamp .stamp-core{position:absolute;inset:0;display:grid;place-items:center;color:var(--eco)}
+@keyframes stamp-spin{to{transform:rotate(360deg)}}
+.stamp svg{animation:stamp-spin 24s linear infinite;transform-origin:center}
+
+/* Field-journal impact card: washi tape + slight tilt */
+.impact-float{transform:rotate(-1.4deg)}
+.impact-float::before{content:'';position:absolute;top:-11px;left:26px;width:76px;height:22px;background:color-mix(in srgb,var(--eco) 55%,transparent);transform:rotate(-3deg);border-radius:2px}
+
+/* Trail-marker category tiles */
+.category-grid{counter-reset:tile}
+.category-grid a{position:relative;border:1.5px solid var(--line);transition:transform .2s,box-shadow .2s,border-color .2s}
+.category-grid a::after{counter-increment:tile;content:counter(tile,decimal-leading-zero);position:absolute;top:17px;right:19px;font-size:10px;font-weight:800;letter-spacing:.08em;color:var(--muted)}
+.category-grid a:hover{transform:translateY(-4px) rotate(-.6deg);border-color:color-mix(in srgb,var(--eco) 55%,var(--line));box-shadow:5px 5px 0 color-mix(in srgb,var(--ink) 10%,transparent)}
+.category-grid span{width:47px;height:47px;display:grid;place-items:center;border:1.5px dashed color-mix(in srgb,var(--eco) 60%,transparent);border-radius:50%;margin-bottom:24px;color:var(--eco)}
+
+/* Ticket-stub cards: perforation line + image zoom on hover */
+.card-image{transition:transform .45s ease}
+.listing-card:hover .card-image,.restore-card:hover .card-image{transform:scale(1.05)}
+.listing-card,.restore-card{border-width:1.5px}
+.card-meta{position:relative;border-top:0;padding-top:16px;margin-top:16px}
+.card-meta::before{content:'';position:absolute;top:0;left:2px;right:2px;border-top:2px dashed color-mix(in srgb,var(--line) 90%,transparent)}
+
+/* "See all" links become dashed trail tags */
+.section-head>a{border:1.5px dashed color-mix(in srgb,var(--eco) 55%,transparent);border-radius:999px;padding:8px 15px;transition:.2s}
+.section-head>a:hover{background:color-mix(in srgb,var(--eco) 12%,transparent)}
+
+/* Checklist badges: stamped circles */
+.feature-list .ico{color:#03210d;background:var(--eco);border-radius:50%;padding:4px}
+
+/* Dashed trail timelines with map-pin dots (journey pages) */
+.timeline>div{border-left:2px dashed color-mix(in srgb,var(--muted) 55%,transparent)}
+.timeline>div:before{left:-10px;top:21px;width:14px;height:14px;background:var(--eco);border:3px solid var(--page-bg,var(--paper));border-radius:50%;box-shadow:0 0 0 1.5px color-mix(in srgb,var(--eco) 60%,transparent)}
+
+/* Restoration progress: trail-blaze stripes */
+.progress i{background:repeating-linear-gradient(45deg,var(--eco) 0 7px,color-mix(in srgb,var(--eco) 72%,var(--deep)) 7px 14px)}
+
+/* Card chips sit like stickers */
+.card-chip{transform:rotate(-2deg)}
+
+/* Focus + inputs: crisp eco edge with a hard shadow */
+.field input:focus,.field select:focus,.field textarea:focus,.form-grid input:focus,.form-grid select:focus,.form-grid textarea:focus,.carbon-form input:focus,.carbon-form select:focus,.booking-card input:focus,.booking-card select:focus,.searchbar input:focus{border-color:var(--eco);box-shadow:3px 3px 0 color-mix(in srgb,var(--eco) 32%,transparent)}
+
+/* Footer: engraved park sign */
+.footer{border-top:3px double color-mix(in srgb,var(--line) 85%,transparent)}
+
+/* Stat numbers feel measured */
+.stats b{font-variant-numeric:tabular-nums}
+
+@media(max-width:699px){
+  .stamp{width:88px;height:88px;top:-16px;right:12px}
+  .brand img{height:36px}
+  .hero{background-position:right -140px top 60px}
+}
