@@ -76,6 +76,7 @@
             <span><x-icon name="users" size="14"/> {{ __('ui.journey.perk_local') }}</span>
             <span><x-icon name="leaf" size="14"/> {{ __('ui.journey.perk_impact') }}</span>
         </div>
+        @include('partials.add-to-itinerary', ['journey' => $journey])
     </aside>
 </section>
 

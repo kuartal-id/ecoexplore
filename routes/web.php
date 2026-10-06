@@ -13,6 +13,7 @@ use App\Http\Controllers\BookingController;
 use App\Http\Controllers\CarbonController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\DirectoryController;
+use App\Http\Controllers\ItineraryController;
 use App\Http\Controllers\JourneyController;
 use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\PageController;
@@ -64,6 +65,16 @@ Route::get('/auth/kuartal-id/callback', [KuartalIdLoginController::class, 'callb
 
 Route::middleware('auth')->group(function () {
     Route::get('/account', [AccountController::class, 'index'])->name('account');
+
+    // Itineraries live under /account so no new top-level URL segment is introduced
+    // (tests/Unit/WebRootHtaccessTest checks every first segment against /.htaccess).
+    Route::get('/account/itineraries', [ItineraryController::class, 'index'])->name('itineraries.index');
+    Route::post('/account/itineraries', [ItineraryController::class, 'store'])->middleware('throttle:20,1')->name('itineraries.store');
+    Route::get('/account/itineraries/{itinerary}', [ItineraryController::class, 'show'])->name('itineraries.show');
+    Route::delete('/account/itineraries/{itinerary}', [ItineraryController::class, 'destroy'])->name('itineraries.destroy');
+    Route::post('/account/itineraries/{itinerary}/items', [ItineraryController::class, 'addItem'])->middleware('throttle:20,1')->name('itineraries.items.store');
+    Route::patch('/account/itineraries/{itinerary}/items/{item}', [ItineraryController::class, 'updateItem'])->name('itineraries.items.update');
+    Route::delete('/account/itineraries/{itinerary}/items/{item}', [ItineraryController::class, 'removeItem'])->name('itineraries.items.destroy');
 });
 
 Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {

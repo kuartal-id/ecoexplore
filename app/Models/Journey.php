@@ -10,7 +10,7 @@ class Journey extends Model
 {
     use HasTranslations;
 
-    public const CATEGORIES = ['dive', 'trek', 'highland', 'geotour', 'food', 'culture'];
+    public const CATEGORIES = ['marine', 'geopark', 'national_park', 'biosphere', 'heritage', 'wildlife'];
 
     protected array $translatable = ['title', 'tagline', 'summary', 'description', 'itinerary', 'includes', 'excludes', 'impact'];
 
