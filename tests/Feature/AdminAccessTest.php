@@ -171,6 +171,30 @@ class AdminAccessTest extends TestCase
         $this->assertModelMissing($listing);
     }
 
+    public function test_admin_can_upload_and_clear_a_journey_image(): void
+    {
+        $this->actingAs(User::factory()->admin()->create());
+        $journey = Journey::factory()->create(['image' => null]);
+
+        // 1x1 PNG written by hand so the test does not depend on GD.
+        $png = base64_decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==');
+        $tmp = tempnam(sys_get_temp_dir(), 'up');
+        file_put_contents($tmp, $png);
+        $file = new \Illuminate\Http\UploadedFile($tmp, 'photo.png', 'image/png', null, true);
+
+        $this->post(route('admin.journeys.image', $journey), ['image' => $file])->assertRedirect(route('admin.journeys.edit', $journey));
+
+        $image = $journey->fresh()->image;
+        $this->assertNotNull($image);
+        $this->assertStringStartsWith('assets/uploads/journeys/', $image);
+        $this->assertFileExists(public_path($image));
+
+        $this->delete(route('admin.journeys.image.remove', $journey))->assertRedirect(route('admin.journeys.edit', $journey));
+        $this->assertNull($journey->fresh()->image);
+
+        @unlink(public_path($image));
+    }
+
     public function test_admin_command_grants_and_revokes(): void
     {
         $user = User::factory()->create(['email' => 'ops@example.com']);

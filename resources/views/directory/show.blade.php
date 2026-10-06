@@ -6,7 +6,7 @@
 
 @section('content')
 <section class="package-hero">
-    <div class="package-photo short" style="background-image:linear-gradient(180deg,transparent 30%,rgba(4,18,22,.85)),url('{{ asset($listing->image ?: 'assets/img/hero.svg') }}')">
+    <div class="package-photo short" style="background-image:linear-gradient(180deg,transparent 30%,rgba(4,18,22,.85)),url('{{ asset($listing->image ?: 'assets/img/photos/hero.jpg') }}')">
         <div>
             <span class="pill on-dark">{{ __('ui.directory.types.'.$listing->type) }} · {{ $listing->subtypeLabel() }}</span>
             <h1>{{ $listing->name }}</h1>

@@ -12,6 +12,7 @@
     <h1 class="admin-h1">{{ $j->exists ? $j->tr('title') : __('ui.admin.new') }}</h1>
     @include('admin.nav')
     @if ($errors->any())<div class="flash flash-err">{{ __('ui.checkout.fix_errors') }}</div>@endif
+    @if (session('status'))<div class="flash">{{ session('status') }}</div>@endif
     <form method="post" action="{{ $j->exists ? route('admin.journeys.update', $j) : route('admin.journeys.store') }}" class="admin-form">
         @csrf
         @if ($j->exists) @method('put') @endif
@@ -25,7 +26,7 @@
             <label class="field">Min pax<input type="number" name="min_pax" value="{{ old('min_pax', $j->min_pax) }}" min="1" required></label>
             <label class="field">Max pax<input type="number" name="max_pax" value="{{ old('max_pax', $j->max_pax) }}" min="1" required>@error('max_pax')<em class="err">{{ $message }}</em>@enderror</label>
             <label class="field">{{ __('ui.admin.difficulty') }}<select name="difficulty">@foreach (['easy', 'moderate', 'challenging'] as $d)<option value="{{ $d }}" @selected(old('difficulty', $j->difficulty) === $d)>{{ __('ui.difficulty.'.$d) }}</option>@endforeach</select></label>
-            <label class="field">{{ __('ui.admin.image') }}<input name="image" value="{{ old('image', $j->image) }}" placeholder="assets/img/reef.svg"></label>
+            <label class="field">{{ __('ui.admin.image') }}<input name="image" value="{{ old('image', $j->image) }}" placeholder="assets/img/photos/journey__rinjani-responsible-trek.jpg"></label>
             <label class="field">{{ __('ui.journey.partner') }}<input name="community_partner" value="{{ old('community_partner', $j->community_partner) }}"></label>
             <label class="field">{{ __('ui.admin.carbon') }}<input type="number" name="carbon_kg_pp" value="{{ old('carbon_kg_pp', $j->carbon_kg_pp) }}" min="0"></label>
             <label class="field">{{ __('ui.admin.sort') }}<input type="number" name="sort_order" value="{{ old('sort_order', $j->sort_order) }}" min="0"></label>
@@ -45,6 +46,11 @@
         <div class="hero-actions"><button class="btn btn-primary" type="submit">{{ __('ui.admin.save') }}</button></div>
     </form>
     @if ($j->exists)
+        @include('admin.partials.image-upload', [
+            'model' => $j,
+            'upload' => route('admin.journeys.image', $j),
+            'remove' => route('admin.journeys.image.remove', $j),
+        ])
         <form method="post" action="{{ route('admin.journeys.destroy', $j) }}" class="top-gap">
             @csrf @method('delete')
             <button class="btn btn-ghost small danger" type="submit" onclick="return confirm('{{ __('ui.admin.delete_confirm') }}')">{{ __('ui.admin.delete') }}</button>

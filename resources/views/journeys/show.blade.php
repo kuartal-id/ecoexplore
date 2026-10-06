@@ -6,7 +6,7 @@
 
 @section('content')
 <section class="package-hero">
-    <div class="package-photo" style="background-image:linear-gradient(180deg,transparent 30%,rgba(4,18,22,.85)),url('{{ asset($journey->image ?: 'assets/img/hero.svg') }}')">
+    <div class="package-photo" style="background-image:linear-gradient(180deg,transparent 30%,rgba(4,18,22,.85)),url('{{ asset($journey->image ?: 'assets/img/photos/hero.jpg') }}')">
         <div>
             <span class="pill on-dark">{{ __('ui.category.'.$journey->category) }} · {{ $journey->durationLabel() }}</span>
             <h1>{{ $journey->tr('title') }}</h1>

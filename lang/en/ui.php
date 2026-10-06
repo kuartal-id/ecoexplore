@@ -229,6 +229,10 @@ return [
         'carbon' => 'Illustrative kg CO₂e / person', 'sort' => 'Sort order', 'summary' => 'Summary', 'description' => 'Description', 'features' => 'Features', 'location' => 'Location', 'unit' => 'Price unit',
         'itinerary_help' => 'Itinerary: one block per day/stop, separated by an empty line. The first line of a block is its title.',
         'lines_help' => 'Lists: one item per line.',
+        'image_upload' => 'Upload photo', 'image_upload_help' => 'JPG, PNG or WebP up to 8 MB. Stored in public/assets/uploads; the path field above is updated automatically.',
+        'image_updated' => 'Photo updated.', 'image_removed' => 'Photo removed (fallback image will be used).',
+        'image_invalid' => 'The file must be a JPG, PNG or WebP image.', 'image_too_big' => 'The image is larger than 8 MB.',
+        'no_image' => 'No photo yet',
     ],
 
     'mail' => [

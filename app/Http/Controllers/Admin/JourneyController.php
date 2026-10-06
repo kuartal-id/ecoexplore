@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Journey;
+use App\Support\ImageUploader;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -48,6 +49,22 @@ class JourneyController extends Controller
         $journey->delete();
 
         return redirect()->route('admin.journeys.index')->with('status', __('ui.admin.deleted'));
+    }
+
+    public function updateImage(Request $request, Journey $journey): RedirectResponse
+    {
+        $journey->image = ImageUploader::handle($request, 'image', 'journeys');
+        $journey->save();
+
+        return redirect()->route('admin.journeys.edit', $journey)->with('status', __('ui.admin.image_updated'));
+    }
+
+    public function destroyImage(Journey $journey): RedirectResponse
+    {
+        $journey->image = null;
+        $journey->save();
+
+        return redirect()->route('admin.journeys.edit', $journey)->with('status', __('ui.admin.image_removed'));
     }
 
     private function validated(Request $request, ?Journey $journey = null): array

@@ -3,10 +3,10 @@
  * - Public pages: network first, cached copy when offline, then /offline.
  * - Never caches personal pages (account, bookings, checkout, admin, auth) or non-GET requests.
  * Bump VERSION when changing this file's caching behaviour. */
-const VERSION = 'eco-v5';
-const SHELL = ['/offline', '/assets/app.css', '/assets/app.js', '/manifest.webmanifest',
+const VERSION = 'eco-v6';
+const SHELL = ['/offline', '/assets/app.css', '/assets/app.js', '/manifest.webmanifest?v=2',
   '/assets/logos/ecoexplore-logo-light.png', '/assets/logos/ecoexplore-logo-dark.png',
-  '/assets/icons/icon-192.png', '/assets/img/hero.svg'];
+  '/assets/icons/icon-192.png?v=2', '/assets/img/photos/hero.jpg'];
 const PUBLIC_PAGES = /^\/($|explore|journeys\/|directory\/|restore|carbon|about|terms|privacy)/;
 const PRIVATE = /^\/(account|bookings|book\/|admin|login|register|logout|auth|forgot-password|reset-password|locale)/;
 

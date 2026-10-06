@@ -11,6 +11,7 @@
     <h1 class="admin-h1">{{ $l->exists ? $l->name : __('ui.admin.new') }}</h1>
     @include('admin.nav')
     @if ($errors->any())<div class="flash flash-err">{{ __('ui.checkout.fix_errors') }}</div>@endif
+    @if (session('status'))<div class="flash">{{ session('status') }}</div>@endif
     <form method="post" action="{{ $l->exists ? route('admin.listings.update', $l) : route('admin.listings.store') }}" class="admin-form">
         @csrf
         @if ($l->exists) @method('put') @endif
@@ -22,7 +23,7 @@
             <label class="field">{{ __('ui.admin.location') }}<input name="location" value="{{ old('location', $l->location) }}" required>@error('location')<em class="err">{{ $message }}</em>@enderror</label>
             <label class="field">{{ __('ui.admin.price') }} (IDR)<input type="number" name="price_idr" value="{{ old('price_idr', $l->price_idr) }}" min="0"></label>
             <label class="field">{{ __('ui.admin.unit') }}<select name="price_unit"><option value="">—</option>@foreach (\App\Models\Listing::PRICE_UNITS as $u)<option value="{{ $u }}" @selected(old('price_unit', $l->price_unit) === $u)>{{ __('ui.unit.'.$u) }}</option>@endforeach</select></label>
-            <label class="field">{{ __('ui.admin.image') }}<input name="image" value="{{ old('image', $l->image) }}" placeholder="assets/img/stay.svg"></label>
+            <label class="field">{{ __('ui.admin.image') }}<input name="image" value="{{ old('image', $l->image) }}" placeholder="assets/img/photos/listing__ubud-garden-villa.jpg"></label>
             <label class="field">{{ __('ui.admin.sort') }}<input type="number" name="sort_order" value="{{ old('sort_order', $l->sort_order) }}" min="0"></label>
         </div>
         @include('admin.pair', ['name' => 'summary', 'label' => __('ui.admin.summary'), 'value' => $l->summary, 'area' => true, 'rows' => 3])
@@ -34,6 +35,11 @@
         <div class="hero-actions"><button class="btn btn-primary" type="submit">{{ __('ui.admin.save') }}</button></div>
     </form>
     @if ($l->exists)
+        @include('admin.partials.image-upload', [
+            'model' => $l,
+            'upload' => route('admin.listings.image', $l),
+            'remove' => route('admin.listings.image.remove', $l),
+        ])
         <form method="post" action="{{ route('admin.listings.destroy', $l) }}" class="top-gap">
             @csrf @method('delete')
             <button class="btn btn-ghost small danger" type="submit" onclick="return confirm('{{ __('ui.admin.delete_confirm') }}')">{{ __('ui.admin.delete') }}</button>
