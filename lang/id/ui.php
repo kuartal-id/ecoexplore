@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'meta' => ['description' => 'Perjalanan regeneratif, ekowisata, dan geowisata di Lombok: paket pilihan, penginapan lokal, pemandu, transportasi, dan proyek restorasi yang bisa Anda danai.'],
+    'meta' => ['description' => 'Perjalanan regeneratif, ekowisata, dan geowisata di seluruh Indonesia: geopark, taman nasional, cagar biosfer, situs warisan dunia, kawasan satwa — dengan penginapan lokal, pemandu, transportasi, dan proyek restorasi yang bisa Anda danai.'],
 
     'nav' => [
         'skip' => 'Lompat ke konten', 'main' => 'Navigasi utama', 'home' => 'Beranda', 'explore' => 'Jelajah', 'stays' => 'Penginapan',
@@ -10,7 +10,7 @@ return [
     ],
 
     'footer' => [
-        'tagline' => 'Perjalanan regeneratif di Indonesia — bagian dari Kuartal.',
+        'tagline' => 'Perjalanan regeneratif di seluruh Indonesia — bagian dari Kuartal.',
         'about' => 'Tentang', 'terms' => 'Syarat', 'privacy' => 'Privasi',
         'sample_note' => 'Pratinjau MVP: perjalanan, listing, mitra, dan harga yang ditampilkan adalah konten contoh dan akan dikonfirmasi sebelum peluncuran. Pembayaran online belum aktif.',
     ],
@@ -22,30 +22,32 @@ return [
 
     'duration' => ['one_day' => '1 hari', 'days_nights' => ':dH/:nM'],
     'unit' => ['person' => 'orang', 'night' => 'kamar/malam', 'day' => 'hari', 'trip' => 'perjalanan', 'booking' => 'pemesanan'],
-    'category' => ['dive' => 'Selam & terumbu', 'trek' => 'Pendakian', 'highland' => 'Dataran tinggi', 'geotour' => 'Geowisata', 'food' => 'Kuliner & kebun', 'culture' => 'Budaya hidup'],
+    'category' => ['marine' => 'Laut & terumbu', 'geopark' => 'Geopark', 'national_park' => 'Taman nasional', 'biosphere' => 'Cagar biosfer', 'heritage' => 'Warisan dunia', 'wildlife' => 'Satwa & alam'],
     'difficulty' => ['easy' => 'Mudah', 'moderate' => 'Sedang', 'challenging' => 'Berat'],
 
     'subtype' => [
-        'accommodation' => 'Penginapan', 'culinary' => 'Kuliner', 'attraction' => 'Atraksi', 'eco_shop' => 'Toko ramah lingkungan', 'transport' => 'Transportasi', 'guide' => 'Pemandu',
-        'eco_stay' => 'Penginapan ramah lingkungan', 'homestay' => 'Homestay', 'eco_lodge' => 'Eco-lodge', 'warung' => 'Warung', 'cafe' => 'Kafe', 'market' => 'Pasar',
-        'waterfall' => 'Air terjun', 'village' => 'Desa', 'beach' => 'Pantai', 'viewpoint' => 'Titik pandang', 'weaving' => 'Tenun', 'pottery' => 'Gerabah',
+        'accommodation' => 'Penginapan', 'culinary' => 'Kuliner', 'attraction' => 'Atraksi', 'activity' => 'Aktivitas', 'eco_shop' => 'Toko ramah lingkungan', 'transport' => 'Transportasi', 'guide' => 'Pemandu',
+        'eco_stay' => 'Penginapan ramah lingkungan', 'homestay' => 'Homestay', 'villa' => 'Vila', 'hotel' => 'Hotel', 'eco_lodge' => 'Eco-lodge', 'eco_bnb' => 'Eco B&B',
+        'warung' => 'Warung', 'cafe' => 'Kafe', 'market' => 'Pasar', 'restaurant' => 'Restoran',
+        'waterfall' => 'Air terjun', 'village' => 'Desa', 'beach' => 'Pantai', 'viewpoint' => 'Titik pandang', 'geosite' => 'Geosite', 'heritage_site' => 'Situs warisan', 'weaving' => 'Tenun', 'pottery' => 'Gerabah',
+        'dive_trip' => 'Tur selam', 'snorkel_trip' => 'Tur snorkeling', 'trek' => 'Pendakian', 'raft' => 'Arung jeram', 'wildlife_tour' => 'Tur satwa', 'culture_tour' => 'Tur budaya',
         'refill' => 'Toko isi ulang', 'produce' => 'Hasil tani', 'flight_concierge' => 'Concierge penerbangan', 'ferry_concierge' => 'Concierge kapal & feri',
         'car_driver' => 'Mobil + sopir', 'trek_organiser' => 'Penyelenggara pendakian', 'nature_guide' => 'Pemandu alam', 'snorkel_guide' => 'Pemandu snorkeling', 'culture_guide' => 'Pemandu budaya',
     ],
 
     'home' => [
-        'title' => 'Perjalanan regeneratif di Lombok',
-        'pill' => 'Lombok · wisata regeneratif',
-        'h1' => 'Berwisata dan tinggalkan Lombok :em',
+        'title' => 'Perjalanan regeneratif di seluruh Indonesia',
+        'pill' => 'Indonesia · wisata regeneratif',
+        'h1' => 'Berwisata dan tinggalkan Indonesia :em',
         'h1_em' => 'lebih baik.',
-        'lead' => 'Perjalanan pilihan ke terumbu, gunung, geopark, kuliner, dan desa bersama mitra lokal — ditambah penginapan, pemandu, transportasi, dan proyek restorasi yang bisa Anda danai, semuanya di satu tempat.',
+        'lead' => 'Perjalanan pilihan ke geopark, taman nasional, cagar biosfer, dan situs warisan dunia — bersama mitra lokal, penginapan, pemandu, aktivitas, dan proyek restorasi yang bisa Anda danai, semuanya di satu tempat.',
         'cta_explore' => 'Jelajahi perjalanan', 'cta_restore' => 'Danai restorasi', 'cta_carbon' => 'Hitung karbon perjalanan',
         'trust_local' => 'Pemandu & tuan rumah lokal', 'trust_small' => 'Kelompok kecil', 'trust_carbon' => 'Sadar jejak karbon',
-        'photo_eyebrow' => 'GEOPARK RINJANI-LOMBOK', 'photo_title' => 'Dari terumbu hingga bibir kawah', 'photo_text' => 'Sembilan perjalanan Lombok yang dirancang bersama warga, dari terumbu Gili hingga dataran tinggi Sembalun.',
+        'photo_eyebrow' => 'INDONESIA · DARI GEOPARK KE TERUMBU', 'photo_title' => 'Dari Sabang sampai Merauke', 'photo_text' => 'Perjalanan menyeluruh nusantara yang dirancang bersama warga — dari terumbu Raja Ampat hingga kaldera Bromo.',
         'float_label' => 'MARKETPLACE RESTORASI',
         'stats_label' => 'Ecoexplore sekilas', 'stat_journeys' => 'perjalanan pilihan', 'stat_listings' => 'listing direktori', 'stat_projects' => 'proyek restorasi', 'stat_types' => 'ekosistem: karang, mangrove, hutan',
-        'dir_eyebrow' => 'Rencanakan semuanya', 'dir_title' => 'Penginapan, kuliner, pemandu & transportasi',
-        'journeys_eyebrow' => 'Perjalanan pilihan', 'journeys_title' => 'Lombok, pelan dan bertanggung jawab', 'journeys_all' => 'Semua :n perjalanan',
+        'dir_eyebrow' => 'Rencanakan semuanya', 'dir_title' => 'Penginapan, kuliner, pemandu & aktivitas',
+        'journeys_eyebrow' => 'Perjalanan pilihan', 'journeys_title' => 'Indonesia, pelan dan bertanggung jawab', 'journeys_all' => 'Semua :n perjalanan',
         'why_eyebrow' => 'Mengapa Ecoexplore', 'why_title' => 'Pariwisata yang memberi kembali kepada alam dan warga',
         'why_text' => 'Kami merancang perjalanan bersama pemandu, tuan rumah, dan kelompok warga setempat, menjaga kelompok tetap kecil, dan menampilkan dampak setiap perjalanan secara terbuka.',
         'why_local' => 'Utamakan warga lokal', 'why_local_text' => 'Pemandu, porter, juru masak, dan tuan rumah dari komunitas yang Anda kunjungi, dengan upah layak.',
@@ -58,9 +60,9 @@ return [
     ],
 
     'explore' => [
-        'title' => 'Jelajahi perjalanan', 'h1' => 'Perjalanan di :em', 'h1_em' => 'Lombok',
-        'lead' => 'Sembilan perjalanan pilihan — terumbu, Rinjani, dataran tinggi, geopark, kuliner, dan kehidupan desa. Harga per orang dalam rupiah.',
-        'search_placeholder' => 'Cari terumbu, Rinjani, kuliner…', 'empty' => 'Tidak ada perjalanan yang cocok.', 'dir_title' => 'Lengkapi perjalanan Anda',
+        'title' => 'Jelajahi perjalanan', 'h1' => 'Perjalanan di :em', 'h1_em' => 'Indonesia',
+        'lead' => 'Perjalanan pilihan ke geopark, taman nasional, cagar biosfer, situs warisan dunia, dan kawasan satwa. Harga per orang dalam rupiah.',
+        'search_placeholder' => 'Cari Komodo, Raja Ampat, Bromo…', 'empty' => 'Tidak ada perjalanan yang cocok.', 'dir_title' => 'Lengkapi perjalanan Anda',
     ],
 
     'journey' => [
@@ -74,21 +76,39 @@ return [
 
     'directory' => [
         'eyebrow' => 'Direktori',
-        'types' => ['accommodation' => 'Penginapan', 'culinary' => 'Kuliner', 'attraction' => 'Atraksi', 'eco_shop' => 'Toko ramah lingkungan', 'transport' => 'Transportasi', 'guide' => 'Pemandu'],
-        'blurbs' => ['accommodation' => 'Eco-stay & homestay', 'culinary' => 'Warung, kafe, pasar', 'attraction' => 'Air terjun, desa, pantai', 'eco_shop' => 'Kerajinan & isi ulang', 'transport' => 'Pesawat, kapal, mobil + sopir', 'guide' => 'Pendakian, alam & budaya'],
+        'types' => ['accommodation' => 'Penginapan', 'culinary' => 'Kuliner', 'attraction' => 'Atraksi', 'activity' => 'Aktivitas', 'eco_shop' => 'Toko ramah lingkungan', 'transport' => 'Transportasi', 'guide' => 'Pemandu'],
+        'blurbs' => ['accommodation' => 'Homestay, vila, eco-lodge', 'culinary' => 'Warung, restoran, pasar', 'attraction' => 'Taman, geosite, warisan', 'activity' => 'Selam, trekking, arung jeram…', 'eco_shop' => 'Kerajinan & isi ulang', 'transport' => 'Pesawat, kapal, mobil + sopir', 'guide' => 'Pendakian, alam & satwa'],
         'leads' => [
-            'accommodation' => 'Penginapan rendah dampak dan homestay keluarga, dapat dipesan per kamar per malam.',
-            'culinary' => 'Tempat menikmati masakan Sasak dan hasil bumi lokal. Harga adalah perkiraan per orang.',
-            'attraction' => 'Tempat umum yang layak dikunjungi. Tiket dan jam buka dapat berubah — cek di lokasi.',
+            'accommodation' => 'Homestay, vila, hotel, eco-lodge, dan eco B&B di seluruh Indonesia, dapat dipesan per kamar per malam.',
+            'culinary' => 'Tempat menikmati masakan lokal di seluruh nusantara. Harga adalah perkiraan per orang.',
+            'attraction' => 'Taman nasional, geopark, situs warisan, dan tempat lain yang layak dikunjungi. Tiket dapat berubah — cek di lokasi.',
+            'activity' => 'Tur dan aktivitas yang dapat dipesan, dijalankan operator lokal berlisensi — selam, trekking, arung jeram, dan lainnya.',
             'eco_shop' => 'Belanja langsung dari pembuat dan kurangi sampah selama perjalanan.',
             'transport' => 'Concierge penerbangan dan kapal, mobil + sopir, serta transfer bandara.',
-            'guide' => 'Penyelenggara pendakian berlisensi dan pemandu lokal, termasuk pendakian Rinjani.',
+            'guide' => 'Pemandu pendakian, alam, dan satwa berlisensi di seluruh Indonesia.',
         ],
         'sample_notice' => 'Listing contoh: nama usaha, harga, dan fasilitas masih sementara sampai setiap mitra dikonfirmasi.',
         'empty' => 'Belum ada listing.', 'info_only' => 'Info saja', 'bookable' => 'Bisa dipesan', 'directory' => 'Direktori',
-        'book_cta' => 'Pesan', 'info_title' => 'Perlu diketahui', 'info_text' => 'Ini entri direktori dan tidak dipesan melalui Ecoexplore. Masukkan ke rencana Anda atau tanyakan kepada kami saat memesan perjalanan.',
+        'book_cta' => 'Pesan', 'info_title' => 'Perlu diketahui', 'info_text' => 'Ini entri direktori dan tidak dipesan melalui Ecoexplore. Masukkan ke itinerary Anda atau tanyakan kepada kami saat memesan perjalanan.',
         'concierge_note' => 'Anda membayar biaya concierge sekarang; harga tiket akan diberikan dan ditagih terpisah setelah Anda setujui.',
         'back' => 'Kembali ke :type', 'more' => 'Lainnya di sekitar',
+    ],
+
+    'itinerary' => [
+        'title' => 'Itinerary saya', 'eyebrow' => 'Itinerary',
+        'h1' => 'Itinerary Anda', 'lead' => 'Rencanakan perhentian harian, lalu pesan yang bisa dipesan — semua di satu tempat.',
+        'create' => 'Itinerary baru', 'name' => 'Nama itinerary', 'name_placeholder' => 'mis. Dua minggu di Indonesia timur',
+        'start' => 'Tanggal mulai', 'save' => 'Buat itinerary', 'created' => 'Itinerary dibuat.', 'deleted' => 'Itinerary dihapus.',
+        'empty' => 'Belum ada itinerary.', 'empty_hint' => 'Jelajahi perjalanan dan listing direktori, lalu ketuk "Tambah ke itinerary".',
+        'stops' => 'Perhentian', 'no_stops' => 'Belum ada perhentian — tambahkan perjalanan dan tempat saat Anda menjelajah.',
+        'add' => 'Tambah ke itinerary', 'added' => 'Ditambahkan ke ":name".', 'removed' => 'Perhentian dihapus.', 'exists' => 'Sudah ada di ":name".',
+        'day' => 'Hari :n', 'day_label' => 'Hari', 'notes' => 'Catatan', 'notes_placeholder' => 'Rencana, pengingat, kode pemesanan…',
+        'update' => 'Simpan perubahan', 'updated' => 'Tersimpan.',
+        'book' => 'Pesan', 'unbookable' => 'Info saja',
+        'confirm_delete' => 'Hapus itinerary ini dan semua perhentiannya?',
+        'confirm_remove' => 'Hapus perhentian ini?',
+        'login_first' => 'Masuk untuk membuat itinerary.',
+        'stop_count' => ':n perhentian|:n perhentian', 'stop_count_plans' => ':n itinerary|:n itinerary',
     ],
 
     'restore' => [
@@ -109,9 +129,9 @@ return [
 
     'carbon' => [
         'title' => 'Kalkulator karbon perjalanan', 'eyebrow' => 'Karbon', 'h1' => 'Kenali :em perjalanan Anda', 'h1_em' => 'jejak karbon',
-        'lead' => 'Estimasi ilustratif yang cepat untuk penerbangan, kapal, mobil, penginapan, dan makanan selama perjalanan ke Lombok.',
+        'lead' => 'Estimasi ilustratif yang cepat untuk penerbangan, kapal, mobil, penginapan, dan makanan selama perjalanan di Indonesia.',
         'origin' => 'Terbang dari', 'flight_class' => 'Kelas kabin', 'return_trip' => 'Penerbangan pulang-pergi', 'travellers' => 'Jumlah pelancong', 'nights' => 'Jumlah malam',
-        'stay' => 'Penginapan', 'diet' => 'Pola makan', 'car_km' => 'Km mobil di Lombok (total)', 'car_hint' => 'Dibagi untuk seluruh rombongan',
+        'stay' => 'Penginapan', 'diet' => 'Pola makan', 'car_km' => 'Km mobil selama perjalanan (total)', 'car_hint' => 'Dibagi untuk seluruh rombongan',
         'boat_trips' => 'Penyeberangan kapal per orang', 'boat_type' => 'Jenis kapal', 'calculate' => 'Hitung',
         'class' => ['economy' => 'Ekonomi', 'premium' => 'Ekonomi premium', 'business' => 'Bisnis'],
         'stays' => ['homestay' => 'Homestay', 'eco_lodge' => 'Eco-lodge', 'hotel' => 'Hotel standar', 'resort' => 'Resor'],
@@ -175,12 +195,13 @@ return [
     'account' => [
         'title' => 'Akun saya', 'eyebrow' => 'Akun', 'hello' => 'Halo, :name', 'bookings' => 'Pemesanan saya',
         'no_bookings' => 'Belum ada pemesanan.', 'connect_kuartal' => 'Hubungkan Kuartal ID', 'kuartal_linked' => 'Kuartal ID terhubung',
+        'itineraries' => 'Itinerary saya', 'itineraries_hint' => 'Rencanakan perhentian harian dan pesan yang bisa dipesan.',
     ],
 
     'auth' => [
         'eyebrow' => 'Akun Ecoexplore',
         'login_title' => 'Masuk', 'login_lead' => 'Gunakan Kuartal ID atau email dan kata sandi Ecoexplore Anda.',
-        'register_title' => 'Buat akun', 'register_lead' => 'Simpan semua perjalanan dan kontribusi Anda di satu tempat.',
+        'register_title' => 'Buat akun', 'register_lead' => 'Simpan semua perjalanan, itinerary, dan kontribusi Anda di satu tempat.',
         'kuartal_button' => 'Masuk dengan Kuartal ID', 'or' => 'atau',
         'password' => 'Kata sandi', 'password_confirm' => 'Ulangi kata sandi', 'remember' => 'Ingat saya',
         'login_button' => 'Masuk', 'register_button' => 'Buat akun', 'forgot' => 'Lupa kata sandi?', 'no_account' => 'Buat akun', 'have_account' => 'Sudah punya akun? Masuk',
@@ -221,8 +242,8 @@ return [
 
     'about' => [
         'title' => 'Tentang', 'h1' => 'Tentang Ecoexplore',
-        'lead' => 'Ecoexplore adalah startup Kuartal untuk wisata regeneratif, ekowisata, dan geowisata di Indonesia, dimulai dari Lombok.',
-        'what_title' => 'Apa yang kami lakukan', 'what_text' => 'Kami menyusun perjalanan kelompok kecil bersama mitra lokal, menampilkan penginapan, kuliner, pemandu, dan transportasi, serta menghubungkan pelancong dengan proyek restorasi karang, mangrove, dan hutan.',
+        'lead' => 'Ecoexplore adalah produk Kuartal untuk wisata regeneratif, ekowisata, dan geowisata di seluruh Indonesia — dimulai dari rumah sendiri, dirancang untuk tumbuh ke negara baru.',
+        'what_title' => 'Apa yang kami lakukan', 'what_text' => 'Kami menyusun perjalanan kelompok kecil ke geopark, taman nasional, cagar biosfer, situs warisan dunia, dan kawasan satwa, menampilkan penginapan, kuliner, aktivitas, toko, pemandu, dan transportasi, serta menghubungkan pelancong dengan proyek restorasi karang, mangrove, dan hutan.',
         'principles_title' => 'Prinsip kami', 'company_title' => 'Perusahaan',
         'company_pending' => '[SUPPLY: nama badan hukum, alamat terdaftar, dan NIB akan diberikan oleh pemilik.]',
     ],
@@ -239,7 +260,7 @@ return [
         ],
         'privacy_sections' => [
             ['h' => 'Data yang kami kumpulkan', 'p' => 'Nama, email, nomor telepon, dan detail pemesanan untuk mengatur perjalanan dan menghubungi Anda.'],
-            ['h' => 'Penggunaan data', 'p' => 'Hanya untuk mengelola pemesanan dan akun Anda. Kami membagikan data yang diperlukan kepada mitra lokal yang menjalankan perjalanan Anda.'],
+            ['h' => 'Penggunaan data', 'p' => 'Hanya untuk mengelola pemesanan, itinerary, dan akun Anda. Kami membagikan data yang diperlukan kepada mitra lokal yang menjalankan perjalanan Anda.'],
             ['h' => 'Masuk akun', 'p' => 'Anda dapat masuk dengan kata sandi Ecoexplore atau Kuartal ID (id.kuartal.id). Dengan Kuartal ID kami menerima nama, email, dan pengenal akun Anda.'],
             ['h' => 'Hak Anda', 'p' => '[SUPPLY: kontak permintaan data, masa retensi, dan kepatuhan terhadap UU Pelindungan Data Pribadi (UU PDP).]'],
         ],

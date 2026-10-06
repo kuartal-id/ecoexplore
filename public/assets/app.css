@@ -236,3 +236,22 @@ body{--page-bg:var(--paper)}
   .brand img{height:36px}
   .hero{background-position:right -140px top 60px}
 }
+
+/* Itineraries: field-journal plan pages */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.add-itin{margin-top:14px;padding-top:12px;border-top:1px dashed color-mix(in srgb,var(--line) 80%,transparent)}
+.add-itin-form{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.add-itin-form select{flex:1;min-width:150px}
+.itin-day{margin:22px 0 8px;display:flex;align-items:center;gap:10px}
+.itin-day::after{content:"";flex:1;border-top:1px dashed color-mix(in srgb,var(--line) 80%,transparent)}
+.itin-list{margin-bottom:6px}
+.itin-stop{align-items:flex-start}
+.itin-actions{display:flex;gap:6px;align-items:flex-start;flex-wrap:wrap;justify-content:flex-end}
+.itin-edit{position:relative}
+.itin-edit summary{cursor:pointer;list-style:none}
+.itin-edit form{display:flex;gap:8px;flex-wrap:wrap;align-items:flex-end;margin-top:8px;padding:10px;border:1px solid var(--line);border-radius:10px;background:color-mix(in srgb,var(--card) 65%,transparent)}
+.itin-edit label{flex:1;min-width:110px}
+.itin-edit .btn{white-space:nowrap}
+@media(max-width:699px){
+  .itin-actions{justify-content:flex-start}
+}

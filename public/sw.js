@@ -3,7 +3,7 @@
  * - Public pages: network first, cached copy when offline, then /offline.
  * - Never caches personal pages (account, bookings, checkout, admin, auth) or non-GET requests.
  * Bump VERSION when changing this file's caching behaviour. */
-const VERSION = 'eco-v3';
+const VERSION = 'eco-v4';
 const SHELL = ['/offline', '/assets/app.css', '/assets/app.js', '/manifest.webmanifest',
   '/assets/logos/ecoexplore-logo-light.png', '/assets/logos/ecoexplore-logo-dark.png',
   '/assets/icons/icon-192.png', '/assets/img/hero.svg'];

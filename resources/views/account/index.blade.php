@@ -19,6 +19,18 @@
 </section>
 
 <section class="section tight">
+    <h2 class="block-title">{{ __('ui.account.itineraries') }}</h2>
+    @php($itinCount = $user->itineraries()->count())
+    <a class="trip-row" href="{{ route('itineraries.index') }}">
+        <div>
+            <b>{{ $itinCount ? trans_choice('ui.itinerary.stop_count_plans', $itinCount, ['n' => $itinCount]) : __('ui.account.itineraries_hint') }}</b>
+            <small>{{ __('ui.account.itineraries_hint') }}</small>
+        </div>
+        <x-icon name="arrow" size="18"/>
+    </a>
+</section>
+
+<section class="section tight">
     <h2 class="block-title">{{ __('ui.account.bookings') }}</h2>
     @if ($bookings->isEmpty())
         <div class="empty">{{ __('ui.account.no_bookings') }} <a class="link" href="{{ route('explore') }}">{{ __('ui.home.cta_explore') }}</a></div>

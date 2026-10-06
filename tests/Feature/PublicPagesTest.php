@@ -24,7 +24,7 @@ class PublicPagesTest extends TestCase
     public static function pages(): array
     {
         $paths = [
-            '/', '/explore', '/explore?category=trek', '/explore?q=rinjani', '/journeys/gili-dive-reef-guardians',
+            '/', '/explore', '/explore?category=national_park', '/explore?q=rinjani', '/journeys/gili-dive-reef-guardians',
             '/directory/accommodations', '/directory/culinary', '/directory/attractions', '/directory/eco-shops',
             '/directory/transport', '/directory/guides', '/directory/transport/flight-concierge-lombok',
             '/directory/guides/rinjani-trekking-organiser', '/directory/attractions/benang-kelambu-waterfall',
@@ -54,15 +54,18 @@ class PublicPagesTest extends TestCase
             ->assertSee('<html lang="id"', false);
     }
 
-    public function test_all_nine_lombok_journeys_are_listed_with_idr_prices(): void
+    public function test_all_sixteen_sample_journeys_are_listed_with_idr_prices(): void
     {
         $response = $this->get('/explore')->assertOk();
 
-        $this->assertSame(9, Journey::published()->count());
+        $this->assertSame(16, Journey::published()->count());
         foreach ([
             'Gili Dive & Reef Guardians', 'Gili Islands Slow Dive Escape', 'Rinjani Responsible Trek',
             'Rinjani Trek & Mountain Stewardship', 'Sembalun Highlands Slow Escape', 'Remnants of Samalas',
             'Lombok Food & Farm Table', 'Lantan Village Living Culture', 'Aik Berik Geotour',
+            'Komodo Island Safari', 'Raja Ampat Reef Expedition', 'Bromo Tengger Caldera',
+            'Leuser Rainforest Trek', 'Ubud Subak Heritage Walk', 'Tangkahan Elephant Encounter',
+            'Wakatobi Dive & Conservation',
         ] as $title) {
             $response->assertSee($title);
         }

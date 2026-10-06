@@ -47,6 +47,7 @@
             <p>{{ __('ui.directory.info_text') }}</p>
             <a class="btn btn-ghost full" href="{{ route('explore') }}">{{ __('ui.home.cta_explore') }}</a>
         @endif
+            @include('partials.add-to-itinerary', ['listing' => $listing])
     </aside>
 </section>
 

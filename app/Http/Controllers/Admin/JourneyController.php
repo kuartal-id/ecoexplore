@@ -20,7 +20,7 @@ class JourneyController extends Controller
 
     public function create(): View
     {
-        return view('admin.journeys.form', ['journey' => new Journey(['is_published' => false, 'duration_days' => 1, 'duration_nights' => 0, 'min_pax' => 1, 'max_pax' => 12, 'category' => 'culture', 'difficulty' => 'easy'])]);
+        return view('admin.journeys.form', ['journey' => new Journey(['is_published' => false, 'duration_days' => 1, 'duration_nights' => 0, 'min_pax' => 1, 'max_pax' => 12, 'category' => 'heritage', 'difficulty' => 'easy'])]);
     }
 
     public function store(Request $request): RedirectResponse

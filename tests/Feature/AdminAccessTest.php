@@ -125,7 +125,7 @@ class AdminAccessTest extends TestCase
             'summary_id' => 'Ringkasan', 'summary_en' => 'Summary',
             'itinerary_id' => "Pagi\nJalan kaki di sawah\n\nSiang\nMakan siang", 'itinerary_en' => "Morning\nRice field walk\n\nNoon\nLunch",
             'includes_id' => "Pemandu\nMakan siang", 'includes_en' => "Guide\nLunch",
-            'category' => 'culture', 'region' => 'Tetebatu', 'duration_days' => 1, 'duration_nights' => 0,
+            'category' => 'heritage', 'region' => 'Tetebatu', 'duration_days' => 1, 'duration_nights' => 0,
             'price_idr' => 650000, 'min_pax' => 1, 'max_pax' => 8, 'difficulty' => 'easy', 'is_published' => '1',
         ];
 

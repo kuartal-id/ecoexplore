@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'meta' => ['description' => 'Regenerative, eco and geotourism journeys in Lombok, Indonesia: curated trips, local stays, guides, transport and restoration projects you can fund.'],
+    'meta' => ['description' => 'Regenerative, eco and geotourism journeys across Indonesia: geoparks, national parks, biosphere reserves, World Heritage sites, wildlife areas — with local stays, guides, transport and restoration projects you can fund.'],
 
     'nav' => [
         'skip' => 'Skip to content', 'main' => 'Main navigation', 'home' => 'Home', 'explore' => 'Explore', 'stays' => 'Stays',
@@ -10,7 +10,7 @@ return [
     ],
 
     'footer' => [
-        'tagline' => 'Regenerative journeys in Indonesia — part of Kuartal.',
+        'tagline' => 'Regenerative journeys across Indonesia — part of Kuartal.',
         'about' => 'About', 'terms' => 'Terms', 'privacy' => 'Privacy',
         'sample_note' => 'MVP preview: journeys, listings, partners and prices shown are sample content and will be confirmed before launch. Online payment is not active yet.',
     ],
@@ -22,30 +22,32 @@ return [
 
     'duration' => ['one_day' => '1 day', 'days_nights' => ':dD/:nN'],
     'unit' => ['person' => 'person', 'night' => 'room-night', 'day' => 'day', 'trip' => 'trip', 'booking' => 'booking'],
-    'category' => ['dive' => 'Dive & reef', 'trek' => 'Trekking', 'highland' => 'Highlands', 'geotour' => 'Geotourism', 'food' => 'Food & farm', 'culture' => 'Living culture'],
+    'category' => ['marine' => 'Marine & reefs', 'geopark' => 'Geoparks', 'national_park' => 'National parks', 'biosphere' => 'Biosphere reserves', 'heritage' => 'World Heritage', 'wildlife' => 'Wildlife & nature'],
     'difficulty' => ['easy' => 'Easy', 'moderate' => 'Moderate', 'challenging' => 'Challenging'],
 
     'subtype' => [
-        'accommodation' => 'Stay', 'culinary' => 'Food', 'attraction' => 'Attraction', 'eco_shop' => 'Eco shop', 'transport' => 'Transport', 'guide' => 'Guide',
-        'eco_stay' => 'Eco-stay', 'homestay' => 'Homestay', 'eco_lodge' => 'Eco-lodge', 'warung' => 'Warung', 'cafe' => 'Café', 'market' => 'Market',
-        'waterfall' => 'Waterfall', 'village' => 'Village', 'beach' => 'Beach', 'viewpoint' => 'Viewpoint', 'weaving' => 'Weaving', 'pottery' => 'Pottery',
+        'accommodation' => 'Stay', 'culinary' => 'Food', 'attraction' => 'Attraction', 'activity' => 'Activity', 'eco_shop' => 'Eco shop', 'transport' => 'Transport', 'guide' => 'Guide',
+        'eco_stay' => 'Eco-stay', 'homestay' => 'Homestay', 'villa' => 'Villa', 'hotel' => 'Hotel', 'eco_lodge' => 'Eco-lodge', 'eco_bnb' => 'Eco B&B',
+        'warung' => 'Warung', 'cafe' => 'Café', 'market' => 'Market', 'restaurant' => 'Restaurant',
+        'waterfall' => 'Waterfall', 'village' => 'Village', 'beach' => 'Beach', 'viewpoint' => 'Viewpoint', 'geosite' => 'Geosite', 'heritage_site' => 'Heritage site', 'weaving' => 'Weaving', 'pottery' => 'Pottery',
+        'dive_trip' => 'Dive trip', 'snorkel_trip' => 'Snorkel trip', 'trek' => 'Trekking', 'raft' => 'Rafting', 'wildlife_tour' => 'Wildlife tour', 'culture_tour' => 'Culture tour',
         'refill' => 'Refill store', 'produce' => 'Farm produce', 'flight_concierge' => 'Flight concierge', 'ferry_concierge' => 'Boat & ferry concierge',
         'car_driver' => 'Car + driver', 'trek_organiser' => 'Trek organiser', 'nature_guide' => 'Nature guide', 'snorkel_guide' => 'Snorkel guide', 'culture_guide' => 'Culture guide',
     ],
 
     'home' => [
-        'title' => 'Regenerative journeys in Lombok',
-        'pill' => 'Lombok · regenerative travel',
-        'h1' => 'Travel that leaves Lombok :em',
+        'title' => 'Regenerative journeys across Indonesia',
+        'pill' => 'Indonesia · regenerative travel',
+        'h1' => 'Travel that leaves Indonesia :em',
         'h1_em' => 'better than you found it.',
-        'lead' => 'Curated reef, mountain, geopark, food and village journeys with local partners — plus stays, guides, transport and restoration projects you can fund, all in one place.',
+        'lead' => 'Curated journeys across geoparks, national parks, biosphere reserves and World Heritage sites — with local partners, stays, guides, activities and restoration projects you can fund, all in one place.',
         'cta_explore' => 'Explore journeys', 'cta_restore' => 'Fund restoration', 'cta_carbon' => 'Estimate trip carbon',
         'trust_local' => 'Local guides & hosts', 'trust_small' => 'Small groups', 'trust_carbon' => 'Carbon-aware trips',
-        'photo_eyebrow' => 'RINJANI-LOMBOK GEOPARK', 'photo_title' => 'From reef to crater rim', 'photo_text' => 'Nine curated Lombok journeys designed with communities, from the Gili reefs to the Sembalun highlands.',
+        'photo_eyebrow' => 'INDONESIA · GEOPARKS TO REEFS', 'photo_title' => 'From Sabang to Merauke', 'photo_text' => 'Journeys across the archipelago designed with communities — from the Raja Ampat reefs to the Bromo caldera.',
         'float_label' => 'RESTORATION MARKETPLACE',
         'stats_label' => 'Ecoexplore at a glance', 'stat_journeys' => 'curated journeys', 'stat_listings' => 'directory listings', 'stat_projects' => 'restoration projects', 'stat_types' => 'ecosystems: coral, mangrove, forest',
-        'dir_eyebrow' => 'Plan everything', 'dir_title' => 'Stays, food, guides & transport',
-        'journeys_eyebrow' => 'Curated journeys', 'journeys_title' => 'Lombok, slowly and responsibly', 'journeys_all' => 'All :n journeys',
+        'dir_eyebrow' => 'Plan everything', 'dir_title' => 'Stays, food, guides & activities',
+        'journeys_eyebrow' => 'Curated journeys', 'journeys_title' => 'Indonesia, slowly and responsibly', 'journeys_all' => 'All :n journeys',
         'why_eyebrow' => 'Why Ecoexplore', 'why_title' => 'Tourism that gives back to places and people',
         'why_text' => 'We design trips with local guides, hosts and community groups, keep groups small and make the impact of each trip visible.',
         'why_local' => 'Local first', 'why_local_text' => 'Guides, porters, cooks and hosts from the communities you visit, fairly paid.',
@@ -58,9 +60,9 @@ return [
     ],
 
     'explore' => [
-        'title' => 'Explore journeys', 'h1' => 'Journeys across :em', 'h1_em' => 'Lombok',
-        'lead' => 'Nine curated trips — reefs, Rinjani, highlands, geopark, food and village life. Prices per person in rupiah.',
-        'search_placeholder' => 'Search reef, Rinjani, food…', 'empty' => 'No journeys match your search.', 'dir_title' => 'Build the rest of your trip',
+        'title' => 'Explore journeys', 'h1' => 'Journeys across :em', 'h1_em' => 'Indonesia',
+        'lead' => 'Curated trips across geoparks, national parks, biosphere reserves, World Heritage sites and wildlife areas. Prices per person in rupiah.',
+        'search_placeholder' => 'Search Komodo, Raja Ampat, Bromo…', 'empty' => 'No journeys match your search.', 'dir_title' => 'Build the rest of your trip',
     ],
 
     'journey' => [
@@ -74,21 +76,39 @@ return [
 
     'directory' => [
         'eyebrow' => 'Directory',
-        'types' => ['accommodation' => 'Accommodations', 'culinary' => 'Culinary', 'attraction' => 'Attractions', 'eco_shop' => 'Eco shops', 'transport' => 'Transport', 'guide' => 'Guides'],
-        'blurbs' => ['accommodation' => 'Eco-stays & homestays', 'culinary' => 'Warungs, cafés, markets', 'attraction' => 'Waterfalls, villages, beaches', 'eco_shop' => 'Crafts & refills', 'transport' => 'Flights, boats, car + driver', 'guide' => 'Trek, nature & culture'],
+        'types' => ['accommodation' => 'Accommodations', 'culinary' => 'Culinary', 'attraction' => 'Attractions', 'activity' => 'Activities', 'eco_shop' => 'Eco shops', 'transport' => 'Transport', 'guide' => 'Guides'],
+        'blurbs' => ['accommodation' => 'Homestays, villas, eco-lodges', 'culinary' => 'Warungs, restaurants, markets', 'attraction' => 'Parks, geosites, heritage', 'activity' => 'Diving, trekking, rafting…', 'eco_shop' => 'Crafts & refills', 'transport' => 'Flights, boats, car + driver', 'guide' => 'Trek, nature & wildlife'],
         'leads' => [
-            'accommodation' => 'Low-impact stays and family homestays, bookable per room-night.',
-            'culinary' => 'Where to eat Sasak food and local produce. Prices are typical spend per person.',
-            'attraction' => 'Public places worth visiting. Fees and opening hours change — check locally.',
+            'accommodation' => 'Homestays, villas, hotels, eco-lodges and eco B&Bs across Indonesia, bookable per room-night.',
+            'culinary' => 'Where to eat local food across the archipelago. Prices are typical spend per person.',
+            'attraction' => 'National parks, geoparks, heritage sites and other places worth visiting. Fees change — check locally.',
+            'activity' => 'Bookable tours and activities run by licensed local operators — diving, trekking, rafting and more.',
             'eco_shop' => 'Buy directly from makers and cut waste on the road.',
             'transport' => 'Flight and ferry concierge, car + driver and airport transfers.',
-            'guide' => 'Licensed trekking organisers and local guides, including Rinjani treks.',
+            'guide' => 'Licensed trekking, nature and wildlife guides across Indonesia.',
         ],
         'sample_notice' => 'Sample listings: business names, prices and features are placeholders until each partner is confirmed.',
         'empty' => 'No listings yet.', 'info_only' => 'Info only', 'bookable' => 'Bookable', 'directory' => 'Directory',
-        'book_cta' => 'Book', 'info_title' => 'Good to know', 'info_text' => 'This is a directory entry; it is not booked through Ecoexplore. Add it to your plans or ask us when you book a journey.',
+        'book_cta' => 'Book', 'info_title' => 'Good to know', 'info_text' => 'This is a directory entry; it is not booked through Ecoexplore. Add it to your itinerary or ask us when you book a journey.',
         'concierge_note' => 'You pay the concierge fee now; tickets are quoted and invoiced separately after you approve them.',
         'back' => 'Back to :type', 'more' => 'More nearby',
+    ],
+
+    'itinerary' => [
+        'title' => 'My itineraries', 'eyebrow' => 'Itinerary',
+        'h1' => 'Your itinerary', 'lead' => 'Plan your stops day by day, then book what is bookable — all in one place.',
+        'create' => 'New itinerary', 'name' => 'Itinerary name', 'name_placeholder' => 'e.g. Two weeks in the east',
+        'start' => 'Start date', 'save' => 'Create itinerary', 'created' => 'Itinerary created.', 'deleted' => 'Itinerary deleted.',
+        'empty' => 'No itineraries yet.', 'empty_hint' => 'Browse journeys and directory listings, then tap “Add to itinerary”.',
+        'stops' => 'Stops', 'no_stops' => 'No stops yet — add journeys and places as you browse.',
+        'add' => 'Add to itinerary', 'added' => 'Added to “:name”.', 'removed' => 'Stop removed.', 'exists' => 'Already in “:name”.',
+        'day' => 'Day :n', 'day_label' => 'Day', 'notes' => 'Notes', 'notes_placeholder' => 'Plans, reminders, booking refs…',
+        'update' => 'Save changes', 'updated' => 'Saved.',
+        'book' => 'Book', 'unbookable' => 'Info only',
+        'confirm_delete' => 'Delete this itinerary and all its stops?',
+        'confirm_remove' => 'Remove this stop?',
+        'login_first' => 'Log in to build an itinerary.',
+        'stop_count' => ':n stop|:n stops', 'stop_count_plans' => ':n itinerary|:n itineraries',
     ],
 
     'restore' => [
@@ -109,9 +129,9 @@ return [
 
     'carbon' => [
         'title' => 'Trip carbon estimator', 'eyebrow' => 'Carbon', 'h1' => 'Know your trip\'s :em', 'h1_em' => 'footprint',
-        'lead' => 'A quick, illustrative estimate of flights, boats, driving, stays and food for a Lombok trip.',
+        'lead' => 'A quick, illustrative estimate of flights, boats, driving, stays and food for a trip in Indonesia.',
         'origin' => 'Flying from', 'flight_class' => 'Cabin class', 'return_trip' => 'Return flight', 'travellers' => 'Travellers', 'nights' => 'Nights',
-        'stay' => 'Accommodation', 'diet' => 'Food', 'car_km' => 'Car km on Lombok (total)', 'car_hint' => 'Shared by the whole party',
+        'stay' => 'Accommodation', 'diet' => 'Food', 'car_km' => 'Car km during your trip (total)', 'car_hint' => 'Shared by the whole party',
         'boat_trips' => 'Boat crossings per person', 'boat_type' => 'Boat type', 'calculate' => 'Estimate',
         'class' => ['economy' => 'Economy', 'premium' => 'Premium economy', 'business' => 'Business'],
         'stays' => ['homestay' => 'Homestay', 'eco_lodge' => 'Eco-lodge', 'hotel' => 'Standard hotel', 'resort' => 'Resort'],
@@ -175,12 +195,13 @@ return [
     'account' => [
         'title' => 'My account', 'eyebrow' => 'Account', 'hello' => 'Hi, :name', 'bookings' => 'My bookings',
         'no_bookings' => 'No bookings yet.', 'connect_kuartal' => 'Connect Kuartal ID', 'kuartal_linked' => 'Kuartal ID connected',
+        'itineraries' => 'My itineraries', 'itineraries_hint' => 'Plan stops day by day and book what\'s bookable.',
     ],
 
     'auth' => [
         'eyebrow' => 'Ecoexplore account',
         'login_title' => 'Log in', 'login_lead' => 'Use your Kuartal ID or your Ecoexplore email and password.',
-        'register_title' => 'Create an account', 'register_lead' => 'Keep all your trips and contributions in one place.',
+        'register_title' => 'Create an account', 'register_lead' => 'Keep all your trips, itineraries and contributions in one place.',
         'kuartal_button' => 'Continue with Kuartal ID', 'or' => 'or',
         'password' => 'Password', 'password_confirm' => 'Confirm password', 'remember' => 'Remember me',
         'login_button' => 'Log in', 'register_button' => 'Create account', 'forgot' => 'Forgot password?', 'no_account' => 'Create an account', 'have_account' => 'Already have an account? Log in',
@@ -221,8 +242,8 @@ return [
 
     'about' => [
         'title' => 'About', 'h1' => 'About Ecoexplore',
-        'lead' => 'Ecoexplore is a Kuartal startup for regenerative, eco and geotourism in Indonesia, starting with Lombok.',
-        'what_title' => 'What we do', 'what_text' => 'We curate small-group journeys with local partners, list stays, food, guides and transport, and connect travellers with coral, mangrove and forest restoration projects.',
+        'lead' => 'Ecoexplore is a Kuartal product for regenerative, eco and geotourism across Indonesia — starting at home, built to grow into new countries.',
+        'what_title' => 'What we do', 'what_text' => 'We curate small-group journeys across geoparks, national parks, biosphere reserves, World Heritage sites and wildlife areas, list stays, food, activities, shops, guides and transport, and connect travellers with coral, mangrove and forest restoration projects.',
         'principles_title' => 'Our principles', 'company_title' => 'Company',
         'company_pending' => '[SUPPLY: legal entity name, registered address and business registration (NIB) to be provided by the owner.]',
     ],
@@ -239,7 +260,7 @@ return [
         ],
         'privacy_sections' => [
             ['h' => 'What we collect', 'p' => 'Your name, email, phone number and booking details, to arrange your trip and contact you.'],
-            ['h' => 'How we use it', 'p' => 'Only to manage your bookings and account. We share the details needed with the local partner delivering your trip.'],
+            ['h' => 'How we use it', 'p' => 'Only to manage your bookings, itineraries and account. We share the details needed with the local partner delivering your trip.'],
             ['h' => 'Sign-in', 'p' => 'You can sign in with an Ecoexplore password or with Kuartal ID (id.kuartal.id). With Kuartal ID we receive your name, email and account identifier.'],
             ['h' => 'Your rights', 'p' => '[SUPPLY: contact for data requests, retention periods and compliance with Indonesia\'s Personal Data Protection Law (UU PDP).]'],
         ],

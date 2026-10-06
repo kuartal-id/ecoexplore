@@ -47,6 +47,11 @@ class User extends Authenticatable
         return $this->hasMany(Booking::class);
     }
 
+    public function itineraries(): HasMany
+    {
+        return $this->hasMany(Itinerary::class)->latest();
+    }
+
     public function isAdmin(): bool
     {
         return (bool) $this->is_admin;

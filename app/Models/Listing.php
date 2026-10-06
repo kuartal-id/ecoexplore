@@ -15,6 +15,7 @@ class Listing extends Model
         'accommodation' => 'accommodations',
         'culinary' => 'culinary',
         'attraction' => 'attractions',
+        'activity' => 'activities',
         'eco_shop' => 'eco-shops',
         'transport' => 'transport',
         'guide' => 'guides',
@@ -26,6 +27,7 @@ class Listing extends Model
         'transport' => 'transport',
         'guide' => 'guide',
         'attraction' => 'activity',
+        'activity' => 'activity',
         'culinary' => 'activity',
         'eco_shop' => 'shop',
     ];
