@@ -19,6 +19,15 @@
         </div>
     </div>
     <div class="hero-visual">
+        <div class="stamp" aria-hidden="true">
+            <svg viewBox="0 0 120 120">
+                <defs><path id="stamp-ring" d="M60,60 m-45,0 a45,45 0 1,1 90,0 a45,45 0 1,1 -90,0"/></defs>
+                <circle class="stamp-bg" cx="60" cy="60" r="59"/>
+                <circle class="stamp-ring" cx="60" cy="60" r="52"/>
+                <text><textPath href="#stamp-ring">ECOEXPLORE • RINJANI • LOMBOK •</textPath></text>
+            </svg>
+            <span class="stamp-core"><x-icon name="leaf" size="30"/></span>
+        </div>
         <div class="hero-photo" style="background-image:linear-gradient(180deg,transparent 35%,rgba(4,18,22,.82)),url('{{ asset('assets/img/hero.svg') }}')">
             <div>
                 <span>{{ __('ui.home.photo_eyebrow') }}</span>
