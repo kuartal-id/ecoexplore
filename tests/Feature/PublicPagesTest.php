@@ -143,7 +143,8 @@ class PublicPagesTest extends TestCase
         $manifest = json_decode(file_get_contents(public_path('manifest.webmanifest')), true);
         $this->assertSame('standalone', $manifest['display']);
         foreach ($manifest['icons'] as $icon) {
-            $this->assertFileExists(public_path(ltrim($icon['src'], '/')));
+            // Icon srcs carry a ?v= cache-buster; check the underlying file only.
+            $this->assertFileExists(public_path(ltrim(parse_url($icon['src'], PHP_URL_PATH), '/')));
         }
 
         $sw = file_get_contents(public_path('sw.js'));
