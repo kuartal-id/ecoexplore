@@ -17,7 +17,7 @@
         <tr><td style="color:#657b7e">{{ __('ui.booking.total') }}</td><td align="right"><b>{{ idr($booking->amount_idr) }}</b></td></tr>
         <tr><td style="color:#657b7e">{{ __('ui.checkout.payment') }}</td><td align="right">{{ $booking->payment_method ? __('ui.payment.'.$booking->payment_method) : '—' }} · {{ __('ui.payment_status.'.$booking->payment_status) }}</td></tr>
     </table>
-    <p><a href="{{ $url }}" style="display:inline-block;background:#19e45a;color:#03210d;padding:12px 18px;border-radius:999px;font-weight:700;text-decoration:none">{{ __('ui.mail.view_booking') }}</a></p>
+    <p><a href="{{ $url }}" style="display:inline-block;background:#003d20;color:#e6dcbc;padding:12px 18px;border-radius:999px;font-weight:700;text-decoration:none">{{ __('ui.mail.view_booking') }}</a></p>
     <p style="font-size:12px;color:#657b7e;line-height:1.6">{{ __('ui.mail.private_link') }}</p>
 </td></tr>
 </table>
