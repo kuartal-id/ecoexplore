@@ -1,0 +1,87 @@
+name: Build deploy branch
+
+# Hostinger Git deploy (see docs/DEPLOY.md). Ported from careers.kuartal.id. On every push
+# to main this runs the full test suite, builds the release tree (repository + production
+# vendor/; there is no Node build -- CSS/JS live in public/assets) and commits it to the
+# `deploy` branch. hPanel > Git deploys `deploy` into public_html on its webhook; the
+# hPanel cron `php artisan app:post-deploy` then migrates and rebuilds caches.
+#
+# Uses only GITHUB_TOKEN (contents: write). No SSH, no other secrets.
+on:
+  push:
+    branches: [main]
+  # Pull requests run the whole build and the Apache web-root check, but never publish.
+  pull_request:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+# One build at a time, in push order, so `deploy` never goes backwards.
+concurrency:
+  group: ${{ github.event_name == 'pull_request' && format('build-deploy-pr-{0}', github.ref) || 'build-deploy-branch' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  DEPLOY_BRANCH: deploy
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          path: src
+          persist-credentials: false
+
+      - name: Set up PHP 8.4 (same as production)
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: mbstring, pdo_sqlite, sqlite3, fileinfo, dom, intl, zip
+          tools: composer:v2
+          coverage: none
+
+      - name: Full test suite (includes the deploy-safety tests)
+        working-directory: src
+        run: |
+          composer validate --no-check-publish
+          composer install --no-interaction --no-progress
+          cp .env.example .env && php artisan key:generate --no-interaction
+          php artisan test
+
+      - name: Build release tree
+        run: src/deploy/build-release.sh src release "$GITHUB_SHA" "$GITHUB_RUN_ID"
+
+      - name: Web root check against real Apache
+        run: sudo src/deploy/test-webroot-apache.sh release
+
+      - name: Commit to the deploy branch
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          url="https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          if git ls-remote --exit-code --heads "$url" "$DEPLOY_BRANCH" >/dev/null; then
+            git clone --quiet --depth 1 --branch "$DEPLOY_BRANCH" --no-checkout "$url" out
+          else
+            git init --quiet -b "$DEPLOY_BRANCH" out
+            git -C out remote add origin "$url"
+          fi
+          # Replace the whole tree with the new release (keeps history; no force-push).
+          find out -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -a release/. out/
+          cd out
+          # -f: vendor packages ship their own .gitignore files; the release tree is
+          # already clean (build-release.sh refuses .env, *.sqlite, *.key, *.log).
+          git add -A -f .
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit --quiet -m "Release ${GITHUB_SHA::12} (run ${GITHUB_RUN_ID})" -m "Built from ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/commit/${GITHUB_SHA}"
+          git push --quiet origin "HEAD:refs/heads/${DEPLOY_BRANCH}"
+          {
+            echo "### Released \`${GITHUB_SHA::12}\` to \`${DEPLOY_BRANCH}\`"
+            echo "Deploy commit: \`$(git rev-parse --short HEAD)\`. Hostinger deploys it on the webhook; the app:post-deploy cron finishes it within a minute."
+          } >> "$GITHUB_STEP_SUMMARY"
