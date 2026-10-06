@@ -23,7 +23,6 @@
             <svg viewBox="0 0 120 120">
                 <defs><path id="stamp-ring" d="M60,60 m-45,0 a45,45 0 1,1 90,0 a45,45 0 1,1 -90,0"/></defs>
                 <circle class="stamp-bg" cx="60" cy="60" r="59"/>
-                <circle class="stamp-ring" cx="60" cy="60" r="52"/>
                 <text><textPath href="#stamp-ring">ECOEXPLORE • RINJANI • LOMBOK •</textPath></text>
             </svg>
             <span class="stamp-core"><x-icon name="leaf" size="30"/></span>

@@ -9,8 +9,8 @@
     <meta property="og:title" content="@yield('title', config('app.name'))">
     <meta property="og:description" content="@yield('description', __('ui.meta.description'))">
     <meta property="og:type" content="website">
-    <meta name="theme-color" content="#f5f8f5" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#061317" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f6f1e2" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#083335" media="(prefers-color-scheme: dark)">
     <link rel="manifest" href="{{ asset('manifest.webmanifest') }}">
     <link rel="icon" href="{{ asset('favicon.ico') }}" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/icons/favicon-32.png') }}">
