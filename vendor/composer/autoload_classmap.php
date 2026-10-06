@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Console\\Commands\\MakeAdmin' => $baseDir . '/app/Console/Commands/MakeAdmin.php',
     'App\\Console\\Commands\\PostDeploy' => $baseDir . '/app/Console/Commands/PostDeploy.php',
+    'App\\Console\\Commands\\SyncContentImages' => $baseDir . '/app/Console/Commands/SyncContentImages.php',
     'App\\Http\\Controllers\\AccountController' => $baseDir . '/app/Http/Controllers/AccountController.php',
     'App\\Http\\Controllers\\Admin\\BilingualFields' => $baseDir . '/app/Http/Controllers/Admin/BilingualFields.php',
     'App\\Http\\Controllers\\Admin\\BookingController' => $baseDir . '/app/Http/Controllers/Admin/BookingController.php',
@@ -46,6 +47,7 @@ return array(
     'App\\Services\\CarbonEstimator' => $baseDir . '/app/Services/CarbonEstimator.php',
     'App\\Services\\Payments\\BookingPayments' => $baseDir . '/app/Services/Payments/BookingPayments.php',
     'App\\Services\\Payments\\PaymentAmountMismatch' => $baseDir . '/app/Services/Payments/PaymentAmountMismatch.php',
+    'App\\Support\\ImageUploader' => $baseDir . '/app/Support/ImageUploader.php',
     'App\\Support\\KuartalId\\IdTokenVerifier' => $baseDir . '/app/Support/KuartalId/IdTokenVerifier.php',
     'App\\Support\\KuartalId\\KuartalIdClient' => $baseDir . '/app/Support/KuartalId/KuartalIdClient.php',
     'App\\Support\\KuartalId\\KuartalIdException' => $baseDir . '/app/Support/KuartalId/KuartalIdException.php',
@@ -175,6 +177,7 @@ return array(
     'Cron\\HoursField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/HoursField.php',
     'Cron\\MinutesField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/MinutesField.php',
     'Cron\\MonthField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
+    'Database\\Factories\\JourneyFactory' => $baseDir . '/database/factories/JourneyFactory.php',
     'Database\\Factories\\UserFactory' => $baseDir . '/database/factories/UserFactory.php',
     'Database\\Seeders\\DatabaseSeeder' => $baseDir . '/database/seeders/DatabaseSeeder.php',
     'Database\\Seeders\\IndonesiaContentSeeder' => $baseDir . '/database/seeders/IndonesiaContentSeeder.php',

@@ -11,10 +11,10 @@
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#f6f1e2" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#083335" media="(prefers-color-scheme: dark)">
-    <link rel="manifest" href="{{ asset('manifest.webmanifest') }}">
-    <link rel="icon" href="{{ asset('favicon.ico') }}" sizes="any">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/icons/favicon-32.png') }}">
-    <link rel="apple-touch-icon" href="{{ asset('assets/icons/apple-touch-icon.png') }}">
+    <link rel="manifest" href="{{ asset('manifest.webmanifest') }}?v=2">
+    <link rel="icon" href="{{ asset('favicon.ico') }}?v=2" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/icons/favicon-32.png') }}?v=2">
+    <link rel="apple-touch-icon" href="{{ asset('assets/icons/apple-touch-icon.png') }}?v=2">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Ecoexplore">

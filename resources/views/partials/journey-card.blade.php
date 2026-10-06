@@ -1,5 +1,5 @@
 <a href="{{ route('journeys.show', $journey) }}" class="listing-card">
-    <div class="card-image" style="background-image:url('{{ asset($journey->image ?: 'assets/img/hero.svg') }}')">
+    <div class="card-image" style="background-image:url('{{ asset($journey->image ?: 'assets/img/photos/hero.jpg') }}')">
         <span class="card-chip">{{ $journey->durationLabel() }}</span>
     </div>
     <div class="card-body">

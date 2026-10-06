@@ -1,5 +1,5 @@
 <a href="{{ route('directory.show', [$listing->segment(), $listing->slug]) }}" class="listing-card">
-    <div class="card-image short" style="background-image:url('{{ asset($listing->image ?: 'assets/img/hero.svg') }}')">
+    <div class="card-image short" style="background-image:url('{{ asset($listing->image ?: 'assets/img/photos/hero.jpg') }}')">
         <span class="card-chip">{{ $listing->subtypeLabel() }}</span>
         <span class="card-chip sample">{{ __('ui.common.sample') }}</span>
     </div>

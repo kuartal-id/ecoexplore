@@ -106,7 +106,7 @@
     </form>
 
     <aside class="order-card">
-        <div class="order-image" style="background-image:url('{{ asset($item->image ?: 'assets/img/hero.svg') }}')"></div>
+        <div class="order-image" style="background-image:url('{{ asset($item->image ?: 'assets/img/photos/hero.jpg') }}')"></div>
         <div class="order-body">
             <div class="eyebrow">{{ $isJourney ? $item->durationLabel() : ($isRestore ? __('ui.restore.type.'.$item->type) : __('ui.directory.types.'.$item->type)) }}</div>
             <h3>{{ $title }}</h3>

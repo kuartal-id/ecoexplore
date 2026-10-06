@@ -483,6 +483,7 @@ class ComposerStaticInitfb54c1f21a6e3fc30444d93aed69809e
     public static $classMap = array (
         'App\\Console\\Commands\\MakeAdmin' => __DIR__ . '/../..' . '/app/Console/Commands/MakeAdmin.php',
         'App\\Console\\Commands\\PostDeploy' => __DIR__ . '/../..' . '/app/Console/Commands/PostDeploy.php',
+        'App\\Console\\Commands\\SyncContentImages' => __DIR__ . '/../..' . '/app/Console/Commands/SyncContentImages.php',
         'App\\Http\\Controllers\\AccountController' => __DIR__ . '/../..' . '/app/Http/Controllers/AccountController.php',
         'App\\Http\\Controllers\\Admin\\BilingualFields' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/BilingualFields.php',
         'App\\Http\\Controllers\\Admin\\BookingController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/BookingController.php',
@@ -521,6 +522,7 @@ class ComposerStaticInitfb54c1f21a6e3fc30444d93aed69809e
         'App\\Services\\CarbonEstimator' => __DIR__ . '/../..' . '/app/Services/CarbonEstimator.php',
         'App\\Services\\Payments\\BookingPayments' => __DIR__ . '/../..' . '/app/Services/Payments/BookingPayments.php',
         'App\\Services\\Payments\\PaymentAmountMismatch' => __DIR__ . '/../..' . '/app/Services/Payments/PaymentAmountMismatch.php',
+        'App\\Support\\ImageUploader' => __DIR__ . '/../..' . '/app/Support/ImageUploader.php',
         'App\\Support\\KuartalId\\IdTokenVerifier' => __DIR__ . '/../..' . '/app/Support/KuartalId/IdTokenVerifier.php',
         'App\\Support\\KuartalId\\KuartalIdClient' => __DIR__ . '/../..' . '/app/Support/KuartalId/KuartalIdClient.php',
         'App\\Support\\KuartalId\\KuartalIdException' => __DIR__ . '/../..' . '/app/Support/KuartalId/KuartalIdException.php',
@@ -650,6 +652,7 @@ class ComposerStaticInitfb54c1f21a6e3fc30444d93aed69809e
         'Cron\\HoursField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/HoursField.php',
         'Cron\\MinutesField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MinutesField.php',
         'Cron\\MonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
+        'Database\\Factories\\JourneyFactory' => __DIR__ . '/../..' . '/database/factories/JourneyFactory.php',
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
         'Database\\Seeders\\IndonesiaContentSeeder' => __DIR__ . '/../..' . '/database/seeders/IndonesiaContentSeeder.php',

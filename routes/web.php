@@ -90,6 +90,8 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::get('/journeys/{journey}/edit', [AdminJourneyController::class, 'edit'])->name('journeys.edit');
     Route::put('/journeys/{journey}', [AdminJourneyController::class, 'update'])->name('journeys.update');
     Route::delete('/journeys/{journey}', [AdminJourneyController::class, 'destroy'])->name('journeys.destroy');
+    Route::post('/journeys/{journey}/image', [AdminJourneyController::class, 'updateImage'])->name('journeys.image');
+    Route::delete('/journeys/{journey}/image', [AdminJourneyController::class, 'destroyImage'])->name('journeys.image.remove');
 
     Route::get('/listings', [AdminListingController::class, 'index'])->name('listings.index');
     Route::get('/listings/create', [AdminListingController::class, 'create'])->name('listings.create');
@@ -97,4 +99,6 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::get('/listings/{listing}/edit', [AdminListingController::class, 'edit'])->name('listings.edit');
     Route::put('/listings/{listing}', [AdminListingController::class, 'update'])->name('listings.update');
     Route::delete('/listings/{listing}', [AdminListingController::class, 'destroy'])->name('listings.destroy');
+    Route::post('/listings/{listing}/image', [AdminListingController::class, 'updateImage'])->name('listings.image');
+    Route::delete('/listings/{listing}/image', [AdminListingController::class, 'destroyImage'])->name('listings.image.remove');
 });

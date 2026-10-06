@@ -229,6 +229,10 @@ return [
         'carbon' => 'Ilustrasi kg CO₂e / orang', 'sort' => 'Urutan', 'summary' => 'Ringkasan', 'description' => 'Deskripsi', 'features' => 'Fasilitas', 'location' => 'Lokasi', 'unit' => 'Satuan harga',
         'itinerary_help' => 'Itinerary: satu blok per hari/perhentian, dipisah baris kosong. Baris pertama setiap blok adalah judulnya.',
         'lines_help' => 'Daftar: satu item per baris.',
+        'image_upload' => 'Unggah foto', 'image_upload_help' => 'JPG, PNG, atau WebP maks. 8 MB. Disimpan di public/assets/uploads; kolom path di atas otomatis diperbarui.',
+        'image_updated' => 'Foto diperbarui.', 'image_removed' => 'Foto dihapus (gambar cadangan akan dipakai).',
+        'image_invalid' => 'File harus berupa gambar JPG, PNG, atau WebP.', 'image_too_big' => 'Ukuran gambar lebih dari 8 MB.',
+        'no_image' => 'Belum ada foto',
     ],
 
     'mail' => [

@@ -27,7 +27,7 @@
             </svg>
             <span class="stamp-core"><x-icon name="leaf" size="30"/></span>
         </div>
-        <div class="hero-photo" style="background-image:linear-gradient(180deg,transparent 35%,rgba(4,18,22,.82)),url('{{ asset('assets/img/hero.svg') }}')">
+        <div class="hero-photo" style="background-image:linear-gradient(180deg,transparent 35%,rgba(4,18,22,.82)),url('{{ asset('assets/img/photos/hero.jpg') }}')">
             <div>
                 <span>{{ __('ui.home.photo_eyebrow') }}</span>
                 <h2>{{ __('ui.home.photo_title') }}</h2>

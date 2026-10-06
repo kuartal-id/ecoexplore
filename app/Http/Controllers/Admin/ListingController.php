@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Listing;
+use App\Support\ImageUploader;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -52,6 +53,22 @@ class ListingController extends Controller
         $listing->delete();
 
         return redirect()->route('admin.listings.index')->with('status', __('ui.admin.deleted'));
+    }
+
+    public function updateImage(Request $request, Listing $listing): RedirectResponse
+    {
+        $listing->image = ImageUploader::handle($request, 'image', 'listings');
+        $listing->save();
+
+        return redirect()->route('admin.listings.edit', $listing)->with('status', __('ui.admin.image_updated'));
+    }
+
+    public function destroyImage(Listing $listing): RedirectResponse
+    {
+        $listing->image = null;
+        $listing->save();
+
+        return redirect()->route('admin.listings.edit', $listing)->with('status', __('ui.admin.image_removed'));
     }
 
     private function validated(Request $request, ?Listing $listing = null): array
